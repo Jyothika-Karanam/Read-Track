@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>ReadTrack</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+  <div class="container mt-5">
+    <div class="text-center mb-4">
+      <h1 class="fw-bold text-primary">📚 ReadTrack</h1>
+      <p class="text-muted">Track and visualize your reading progress easily</p>
+    </div>
+    <div class="d-flex justify-content-center gap-3">
+      <a href="/add" class="btn btn-success btn-lg px-4">➕ Add Content</a>
+      <a href="/log" class="btn btn-warning btn-lg px-4">📝 Log Progress</a>
+      <a href="/dashboard" class="btn btn-primary btn-lg px-4">📊 Dashboard</a>
+    </div>
+    <div class="row mt-5">
+      {% set cover_map = {
+        'Pride and Prejudice by Jane Austen': 'https://covers.openlibrary.org/b/id/8228691-L.jpg',
+        'To Kill a Mockingbird by Harper Lee': 'https://covers.openlibrary.org/b/id/9874151-L.jpg',
+        'The Great Gatsby by F. Scott Fitzgerald': 'https://covers.openlibrary.org/b/id/7222246-L.jpg',
+        '1984 by George Orwell': 'https://covers.openlibrary.org/b/id/7222246-L.jpg',
+        'One Hundred Years of Solitude by Gabriel García Márquez': 'https://covers.openlibrary.org/b/id/8775116-L.jpg',
+        'Anna Karenina by Leo Tolstoy': 'https://covers.openlibrary.org/b/id/8231856-L.jpg',
+        'The Odyssey by Homer': 'https://covers.openlibrary.org/b/id/8235116-L.jpg',
+        'Hamlet by William Shakespeare': 'https://covers.openlibrary.org/b/id/8231996-L.jpg',
+        'Atomic Habits': url_for('static', filename='book_covers/atomic_habits.jpg'),
+        'Deep Work': url_for('static', filename='book_covers/deepwork.jpg'),
+        'The Pragmatic Programmer': 'https://m.media-amazon.com/images/I/51A5cHQhSqL.jpg',
+        'Clean Code': 'https://m.media-amazon.com/images/I/41xShlnTZTL.jpg',
+        'AI Superpowers': url_for('static', filename='book_covers/aisuperpower.jpg'),
+        'Design Patterns Explained': 'https://m.media-amazon.com/images/I/51Zymoq7UnL.jpg',
+        'Flask Web Development': url_for('static', filename='book_covers/flask.jpg'),
+        'Learning React': 'https://m.media-amazon.com/images/I/51UDEzMJVpL.jpg',
+        'atomic habit': url_for('static', filename='book_covers/atomic_habits.jpg')
+      } %}
+      {% set pdf_map = {
+        'Atomic Habits': url_for('static', filename='pdfs/atomic_habits.pdf'),
+        'Deep Work': url_for('static', filename='pdfs/deepwork.pdf'),
+        'AI Superpowers': url_for('static', filename='pdfs/aisuperpower.pdf'),
+        'Flask Web Development': url_for('static', filename='pdfs/flask.pdf')
+      } %}
+      {% for book in books %}
+      <div class="col-6 col-md-3 mb-4 d-flex align-items-stretch">
+        <div class="card h-100 shadow-sm" style="width: 180px; height: 300px; margin: 0 auto; display: flex; flex-direction: column;">
+          {% set img_url = cover_map.get(book.title, url_for('static', filename='book_covers/placeholder.jpg')) %}
+          <img src="{{ img_url }}" class="card-img-top" alt="Book Cover" style="height: 200px; width: 100%; object-fit: cover;">
+          <div class="card-body p-2 d-flex align-items-end" style="flex: 1 1 auto;">
+            <h5 class="card-title" style="font-size: 1rem; width: 100%; text-align: center;">{{ book.title }}</h5>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</body>
+</html>
+

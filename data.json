@@ -1,0 +1,74 @@
+[
+    {
+        "title": "Atomic Habits",
+        "progress": 100
+    },
+    {
+        "title": "Deep Work",
+        "progress": 50
+    },
+    {
+        "title": "The Pragmatic Programmer",
+        "progress": 30
+    },
+    {
+        "title": "Clean Code",
+        "progress": 0
+    },
+    {
+        "title": "AI Superpowers",
+        "progress": 65
+    },
+    {
+        "title": "Design Patterns Explained",
+        "progress": 20
+    },
+    {
+        "title": "Flask Web Development",
+        "progress": 95
+    },
+    {
+        "title": "Learning React",
+        "progress": 10
+    },
+    {
+        "title": "atomic habit",
+        "progress": 0
+    },
+    {
+        "title": "atomic habit",
+        "progress": 0
+    },
+    {
+        "title": "Pride and Prejudice by Jane Austen",
+        "progress": 0
+    },
+    {
+        "title": "To Kill a Mockingbird by Harper Lee",
+        "progress": 0
+    },
+    {
+        "title": "The Great Gatsby by F. Scott Fitzgerald",
+        "progress": 0
+    },
+    {
+        "title": "1984 by George Orwell",
+        "progress": 0
+    },
+    {
+        "title": "One Hundred Years of Solitude by Gabriel García Márquez",
+        "progress": 0
+    },
+    {
+        "title": "Anna Karenina by Leo Tolstoy",
+        "progress": 0
+    },
+    {
+        "title": "The Odyssey by Homer",
+        "progress": 0
+    },
+    {
+        "title": "Hamlet by William Shakespeare",
+        "progress": 0
+    }
+]
